@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hypertension Prediction Web Application</title>
+</head>
+<body style="text-align: center;font-size: large;"> 
+    <h1 style="text-align: center;background-color: aqua;">Hypertension Prediction Web Application</h1>
+    <h5>This is an application which predicts whether the person is suffering from hypertension or not with help of given inputs.
+    Model is trained using 26k data points and it is still under observation stage.</h5>
+    
+    <style>
+        body {
+          background-image: url('https://watermark.lovepik.com/photo/50090/8347.jpg_wh1200.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: 100% 100%;
+        }
+    </style>
+    <b style="background-color: aliceblue;"> 
+    <form action="/predict" method="get">
+        <label>Age:</label>
+        <input type="text" name="age" placeholder="Enter age between 11 to 99" size = '30px'>
+        
+        <label >Sex :</label>
+        <select name="sex">
+            <option value="0">Female</option>
+            <option value="1">Male</option>
+        </select>
+        <br>
+        <br>
+        
+        <label>Trestbps:</label>
+        <input type="text" name="trestbps" placeholder="Value range: 94 to 200" size = '32px' >
+         
+
+        <label >Cp :</label>
+        <select name="cp">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+        <br>
+        <br>
+        
+
+        
+        <label>Chol:</label>
+        <input type="text" name="chol" placeholder="Value range: 126 to 565" size = '35px'>
+        
+        
+        <label >FBS :</label>
+        <select name="fbs">
+            <option value="0">0</option>
+            <option value="1">1</option>
+        </select>
+        <br>
+        <br>
+        
+        <label>Thalach:</label>
+        <input type="text" name="thalach" placeholder="Value Range: 71 to 203" size = '25px'>
+        
+        
+        <label >Restecg :</label>
+        <select name="restecg">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+        </select>
+        <br>
+        <br>
+        
+        <label>Oldpeak:</label>
+        <input type="text" name="oldpeak" placeholder="Value range: 0 - 6.3" size = '22px'>
+        
+        
+
+        <label >Exang :</label>
+        <select name="exang">
+            <option value="0">0</option>
+            <option value="1">1</option>
+        </select>
+        <br>
+        <br>
+        
+
+        
+        <label >Slope :</label>
+        <select name="slope">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+        </select>
+        
+        <label >ca :</label>
+        <select name="ca">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+        
+        <label >Thal :</label>
+        <select name="thal">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+        <br>
+        <br>
+        
+        <input type="submit" name="submit" >
+        <br>
+        <br>
+
+        <h3 style="background-color: aquamarine;">Prediction :<i style="color: brown;">{{prediction}}</i></h3>
+    </b>
+        
+    </form>
+</body>
+</html>
